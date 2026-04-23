@@ -1,31 +1,40 @@
-🧠 MNIST Handwritten Digit Classification using Deep Learning
+# 🧠 MNIST Handwritten Digit Classification using Deep Learning
 
-👨‍💻 Group Members
-FC211012 – M.H.M Azeem
-FC211025 – W.M.M.C.B Wijesundara
-FC211030 – M.M Siyas
-FC211028 – M.R.M.R Fasri
+## 👨‍💻 Group Members
+- **FC211012** – M.H.M Azeem  
+- **FC211025** – W.M.M.C.B Wijesundara  
+- **FC211030** – M.M Siyas  
+- **FC211028** – M.R.M.R Fasri  
 
-📌 Project Overview
-This project focuses on building a Convolutional Neural Network (CNN) model to classify handwritten digits (0–9) using the MNIST dataset.
+---
 
-A Streamlit web application is developed to allow users to upload an image of a handwritten digit and receive real-time predictions.
+## 📌 Project Overview
+This project focuses on building a **Convolutional Neural Network (CNN)** model to classify handwritten digits (0–9) using the **MNIST dataset**.
 
-🎯 Objectives
-Develop a CNN model for digit classification
-Achieve high accuracy on MNIST dataset
-Deploy the model using a simple web interface
-Allow users to upload images and get predictions
+A **Streamlit web application** is developed to allow users to upload an image of a handwritten digit and receive real-time predictions with confidence scores.
 
-🧱 Technologies Used
-Python
-TensorFlow / Keras
-NumPy
-OpenCV
-Streamlit
-Matplotlib
+---
 
-📂 Project Structure
+## 🎯 Objectives
+- Develop a CNN model for digit classification  
+- Achieve high accuracy on the MNIST dataset  
+- Deploy the model using a web-based interface  
+- Enable users to upload images and get predictions  
+
+---
+
+## 🧱 Technologies Used
+- Python  
+- TensorFlow / Keras  
+- NumPy  
+- OpenCV  
+- Streamlit  
+- Matplotlib  
+
+---
+
+## 📂 Project Structure
+```
 Handwritten_digit_Classification_using_deep_learning/
 │
 ├── models/
@@ -38,62 +47,87 @@ Handwritten_digit_Classification_using_deep_learning/
 │
 ├── README.md
 └── requirements.txt
+```
 
-🧠 Model Architecture (LeNet-5 Inspired)
-Conv2D (6 filters, 5×5, tanh)
-Average Pooling
-Conv2D (16 filters, 5×5, tanh)
-Average Pooling
-Flatten
-Dense (120 neurons, tanh)
-Dense (84 neurons, tanh)
-Output Layer (10 neurons, softmax)
+---
 
-📊 Dataset
-MNIST Handwritten Digits Dataset
-60,000 training images
-10,000 testing images
-Image size: 28 × 28 grayscale
+## 🧠 Model Architecture (LeNet-5 Inspired)
+- Conv2D (6 filters, 5×5, activation = tanh)  
+- Average Pooling  
+- Conv2D (16 filters, 5×5, activation = tanh)  
+- Average Pooling  
+- Flatten  
+- Dense (120 neurons, activation = tanh)  
+- Dense (84 neurons, activation = tanh)  
+- Output Layer (10 neurons, activation = softmax)  
 
-⚙️ Installation & Setup
-1️⃣ Create virtual environment
+---
+
+## 📊 Dataset
+- **MNIST Handwritten Digits Dataset**  
+- 60,000 training images  
+- 10,000 testing images  
+- Image size: **28 × 28 grayscale**
+
+---
+
+## ⚙️ Installation & Setup
+
+### 1. Clone the repository
+```bash
+git clone https://github.com/your-username/your-repo-name.git
+cd Handwritten_digit_Classification_using_deep_learning
+```
+
+### 2. Create a virtual environment
+```bash
 python -m venv .venv
+```
 
-2️⃣ Activate environment
-# Windows
+### 3. Activate the environment
+
+**Windows:**
+```bash
 .venv\Scripts\activate
+```
 
-3️⃣ Install dependencies
+**Mac/Linux:**
+```bash
+source .venv/bin/activate
+```
+
+### 4. Install dependencies
+```bash
+pip install -r requirements.txt
+```
+
+_or manually:_
+```bash
 pip install tensorflow==2.13.0 streamlit numpy pillow opencv-python matplotlib
+```
 
-🚀 Run the Application
+---
+
+## 🚀 Run the Application
+```bash
 cd src
 streamlit run app.py
+```
 
-Open browser:
+Then open your browser:
+```
 http://localhost:8501
+```
 
-📸 How It Works
-User uploads a handwritten digit image
-Image is preprocessed:
-Converted to grayscale
-Resized to 28×28
-Normalized
-Model predicts the digit
-Result and confidence scores are displayed
+---
 
-✅ Features
-User-friendly web interface
-Real-time digit prediction
-Confidence visualization
-Image preprocessing pipeline
+## 📸 How It Works
+1. Upload a handwritten digit image  
+2. Image is preprocessed:
+   - Converted to grayscale  
+   - Resized to 28×28  
+   - Normalized  
+3. The trained CNN model predicts the digit  
+4. Prediction and confidence scores are displayed  
 
-⚠️ Known Issues & Fixes
-.h5 model compatibility issues with newer TensorFlow versions
-Fixed by using .keras format for model saving
-
-📈 Expected Results
-Accuracy: ~98–99% on MNIST dataset
-
-📝 Conclusion
-This project demonstrates how deep learning models can be integrated into a web application to provide real-time predictions. The combination of CNN and Streamlit enables an efficient and user-friendly solution for handwritten digit recognition.
+---
