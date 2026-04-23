@@ -21,7 +21,7 @@ st.markdown("""
         text-align: center;
         color: #1E88E5;
         font-size: 2.8rem;
-        margin-bottom: 1rem;
+        margin-bottom: 3rem;
     }
     .prediction-box {
         text-align: center;
@@ -53,6 +53,7 @@ st.markdown("""
         border-radius: 10px;
         border-left: 5px solid #1E88E5;
         margin: 1rem 0;
+            color:black;
     }
 </style>
 """, unsafe_allow_html=True)
@@ -114,20 +115,20 @@ with col1:
         st.session_state.image_ready = False
     
     # Alternative: Use sample images
-    st.markdown("### 🧪 Try Sample Digits")
-    sample_cols = st.columns(5)
-    sample_digits = list(range(10))
+    # st.markdown("### 🧪 Try Sample Digits")
+    # sample_cols = st.columns(5)
+    # sample_digits = list(range(10))
     
-    for idx, col in enumerate(sample_cols):
-        if idx < len(sample_digits):
-            with col:
-                if st.button(f"{sample_digits[idx]}", use_container_width=True):
-                    # Create a simple test image
-                    img = np.zeros((28, 28, 3), dtype=np.uint8)
-                    # In a real app, you'd have actual sample images
-                    st.info(f"Selected digit {sample_digits[idx]}")
-                    st.session_state.test_digit = sample_digits[idx]
-                    st.session_state.use_test = True
+    # for idx, col in enumerate(sample_cols):
+    #     if idx < len(sample_digits):
+    #         with col:
+    #             if st.button(f"{sample_digits[idx]}", use_container_width=True):
+    #                 # Create a simple test image
+    #                 img = np.zeros((28, 28, 3), dtype=np.uint8)
+    #                 # In a real app, you'd have actual sample images
+    #                 st.info(f"Selected digit {sample_digits[idx]}")
+    #                 st.session_state.test_digit = sample_digits[idx]
+    #                 st.session_state.use_test = True
 
 with col2:
     st.markdown("## 🔮 Prediction Results")
@@ -249,8 +250,8 @@ if st.button("🔄 Clear Results", type="secondary"):
 # Footer
 st.markdown("---")
 st.markdown("""
-<div style="text-align: center; color: #666; padding: 2rem;">
-    <p>MNIST Digit Classification | Deep Learning Assignment</p>
-    <p>Using your trained model: <code>mnist_tensorflow_prediction_model.h5</code></p>
+<div style="text-align: center; color: #666; padding-top:2rem;">
+    <p>MNIST Digit Classification | Deep Learning Assignment Group-09</p>
+    <p>Using your trained model: <code>mnist_tensorflow_prediction_model.keras</code></p>
 </div>
 """, unsafe_allow_html=True)
